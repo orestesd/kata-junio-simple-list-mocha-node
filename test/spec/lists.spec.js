@@ -101,5 +101,14 @@ describe("DoubleLinkedList", function() {
 
 		assert.deepEqual(list.values(), ['fred', 'wilma', 'betty']);
 	});
+
+	describe("finding values", function() {
+		
+		it("find unexisting value returns null", function() {
+			var result = list.find('fred');
+			assert.equal(result, null);
+		});
+
+	});
 });
 
