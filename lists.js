@@ -72,6 +72,31 @@ var LinkedList = function() {
 
 
 var DoubleLinkedList = function() {
+	var Node = function(value, prev) {
+		this.value = value;
+		this.prev = prev;
+		this.next = null;
+
+		if (prev)
+			prev.next = this;
+	}
+
+	var firstNode, lastNode;
+
+	var values = function() {
+		var vals = [];
+		var temp = firstNode;
+		while(temp) {
+			vals.push(temp.value);
+			temp = temp.next;
+		}
+
+		return vals;
+	}
+
+	return {
+		values : values
+	}
 }
 
 
