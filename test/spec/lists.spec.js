@@ -88,5 +88,18 @@ describe("DoubleLinkedList", function() {
 	it("a new double linked list is empty", function() {
 		assert.equal(list.values().length, 0);
 	});
+
+	it("new items are added to the double linked list", function() {
+		list.add('fred');
+		assert.equal(list.values().length, 1);
+
+		list.add('wilma');
+		assert.equal(list.values().length, 2);
+
+		list.add('betty');
+		assert.equal(list.values().length, 3);
+
+		assert.deepEqual(list.values(), ['fred', 'wilma', 'betty']);
+	});
 });
 
