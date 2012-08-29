@@ -54,6 +54,11 @@ describe("Single LinkedList", function() {
 			list.remove(list.find('fred'));
 			assert.deepEqual(list.values(), ['wilma', 'betty', 'barney']);
 		});
+
+		it("deleting middle item from list", function() {
+			list.remove(list.find('wilma'));
+			assert.deepEqual(list.values(), ['fred', 'betty', 'barney']);
+		});
 	});
 
 });
