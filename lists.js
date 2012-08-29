@@ -94,8 +94,18 @@ var DoubleLinkedList = function() {
 		return vals;
 	}
 
+	var add = function(item) {
+		var node = new Node(item, lastNode);
+
+		lastNode = node;
+		if (!firstNode)
+			firstNode = node;
+
+	};
+
 	return {
-		values : values
+		values : values,
+		add : add
 	}
 }
 
