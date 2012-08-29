@@ -9,8 +9,8 @@ describe("Single LinkedList", function() {
 
 	it("a new list is empty", function() {
 		var list = new LinkedList();
-		// expect(list).to.be.empty;
 		assert.equal(list.values().length, 0);
 	});
+
 });
 
