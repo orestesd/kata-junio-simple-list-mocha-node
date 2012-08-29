@@ -14,8 +14,15 @@ describe("Single LinkedList", function() {
 
 	it("new items are added to the list", function() {
 		var list = new LinkedList();
+		
 		list.add('fred');
 		assert.equal(list.values().length, 1);
+
+		list.add('wilma');
+		assert.equal(list.values().length, 2);
+
+		list.add('betty');
+		assert.equal(list.values().length, 3);
 	});
 });
 
