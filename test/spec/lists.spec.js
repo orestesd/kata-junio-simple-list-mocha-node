@@ -35,8 +35,13 @@ describe("Single LinkedList", function() {
 
 		it("find existing value returns the node", function() {
 			list.add('fred');
+			list.add('wilma');
+			
 			var result = list.find('fred');
 			assert.deepEqual(result.value, 'fred');
+
+			result = list.find('wilma');
+			assert.deepEqual(result.value, 'wilma');
 		});
 
 	});

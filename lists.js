@@ -36,6 +36,7 @@ var LinkedList = function() {
 		while(temp) {
 			if (temp.value === item)
 				return temp
+			temp = temp.next;
 		}
 		return null;
 	};
