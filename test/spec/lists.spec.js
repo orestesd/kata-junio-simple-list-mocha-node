@@ -24,5 +24,22 @@ describe("Single LinkedList", function() {
 		list.add('betty');
 		assert.equal(list.values().length, 3);
 	});
+
+	describe("finding values", function() {
+		
+		it("find unexisting value returns null", function() {
+			var list = new LinkedList();
+			var result = list.find('fred');
+			assert.equal(result, null);
+		});
+
+		it("find existing value returns the node", function() {
+			var list = new LinkedList();
+			list.add('fred');
+			var result = list.find('fred');
+			assert.deepEqual(result, 'fred');
+		});
+
+	});
 });
 
