@@ -46,7 +46,16 @@ var LinkedList = function() {
 		if (found) {
 			if (found.value === firstNode.value) {
 				firstNode = firstNode.next
-			}
+			} else {
+                var temp = firstNode;
+                while(temp.next) {
+                    if (temp.next.value === node.value) {
+                        temp.next = temp.next.next;
+                        break;
+                    }
+                    temp = temp.next;
+                }
+            }
 		}
 		return found;
 	}
