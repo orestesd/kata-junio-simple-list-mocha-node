@@ -70,4 +70,10 @@ var LinkedList = function() {
 	}
 }
 
+
+var DoubleLinkedList = function() {
+}
+
+
 exports.LinkedList = LinkedList;
+exports.DoubleLinkedList = DoubleLinkedList;

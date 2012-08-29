@@ -76,3 +76,14 @@ describe("Single LinkedList", function() {
 
 });
 
+describe("DoubleLinkedList", function() {
+	
+	var DoubleLinkedList = require('../../lists.js').DoubleLinkedList;
+	var list;
+
+	beforeEach(function() {
+		list = new DoubleLinkedList();
+	});
+
+});
+
