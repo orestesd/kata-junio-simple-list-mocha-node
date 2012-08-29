@@ -40,5 +40,21 @@ describe("Single LinkedList", function() {
 		});
 
 	});
+
+	describe("deleting items", function() {
+		
+		beforeEach(function() {
+			list.add('fred');
+			list.add('wilma');
+			list.add('betty');
+			list.add("barney")
+		});
+	
+		it("deleting first item from list", function() {
+			list.delete(list.find('fred'));
+			assert.deepEqual(list.values(), ['wilma', 'betty', 'barney']);
+		});
+	});
+
 });
 
