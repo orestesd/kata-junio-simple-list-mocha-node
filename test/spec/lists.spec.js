@@ -3,18 +3,17 @@ var assert = require('assert');
 describe("Single LinkedList", function() {
 
 	var LinkedList = require('../../lists.js').LinkedList;
+	var list;
 
 	beforeEach(function() {
+		list = new LinkedList();
 	});
 
 	it("a new list is empty", function() {
-		var list = new LinkedList();
 		assert.equal(list.values().length, 0);
 	});
 
 	it("new items are added to the list", function() {
-		var list = new LinkedList();
-		
 		list.add('fred');
 		assert.equal(list.values().length, 1);
 
@@ -30,13 +29,11 @@ describe("Single LinkedList", function() {
 	describe("finding values", function() {
 		
 		it("find unexisting value returns null", function() {
-			var list = new LinkedList();
 			var result = list.find('fred');
 			assert.equal(result, null);
 		});
 
 		it("find existing value returns the node", function() {
-			var list = new LinkedList();
 			list.add('fred');
 			var result = list.find('fred');
 			assert.deepEqual(result.value, 'fred');
