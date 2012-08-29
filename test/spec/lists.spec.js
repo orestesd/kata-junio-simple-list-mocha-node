@@ -141,6 +141,14 @@ describe("DoubleLinkedList", function() {
 			assert.deepEqual(list.values(), ['fred', 'betty', 'barney']);
 		});
 
+		it("deleting last item from list", function() {
+			list.remove(list.find('barney'));
+			assert.deepEqual(list.values(), ['fred', 'wilma', 'betty']);
+
+			list.add('courtney');
+			assert.deepEqual(list.values(), ['fred', 'wilma', 'betty', 'courtney']);
+		});
+
 	});
 });
 
