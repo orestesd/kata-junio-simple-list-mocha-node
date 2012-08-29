@@ -110,10 +110,24 @@ var DoubleLinkedList = function() {
 		return null;
 	};
 
+	var remove = function(node) {
+		var found = find(node.value);
+		if (found) {
+			if (found.prev) {
+				found.prev.next = found.next
+			}
+			if (found.next) {
+				found.next.prev = found.prev
+			}
+		}
+		return found;
+	}
+
 	return {
 		values : values,
 		add : add,
-		find : find
+		find : find,
+		remove : remove
 	}
 }
 
