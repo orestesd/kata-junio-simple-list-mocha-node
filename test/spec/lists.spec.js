@@ -85,5 +85,8 @@ describe("DoubleLinkedList", function() {
 		list = new DoubleLinkedList();
 	});
 
+	it("a new double linked list is empty", function() {
+		assert.equal(list.values().length, 0);
+	});
 });
 
