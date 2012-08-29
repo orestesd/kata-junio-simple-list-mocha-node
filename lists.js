@@ -40,10 +40,21 @@ var LinkedList = function() {
 		return null;
 	};
 
+	var remove = function(node) {
+		var found = find(node.value);
+		if (found) {
+			if (found.value === firstNode.value) {
+				firstNode = firstNode.next
+			}
+		}
+		return found;
+	}
+
 	return {
 		values : values,
 		add : add,
-		find : find
+		find : find,
+		remove : remove
 	}
 }
 

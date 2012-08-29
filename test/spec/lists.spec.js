@@ -51,7 +51,7 @@ describe("Single LinkedList", function() {
 		});
 	
 		it("deleting first item from list", function() {
-			list.delete(list.find('fred'));
+			list.remove(list.find('fred'));
 			assert.deepEqual(list.values(), ['wilma', 'betty', 'barney']);
 		});
 	});
