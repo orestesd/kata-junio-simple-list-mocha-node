@@ -37,7 +37,7 @@ describe("Single LinkedList", function() {
 			var list = new LinkedList();
 			list.add('fred');
 			var result = list.find('fred');
-			assert.deepEqual(result, 'fred');
+			assert.deepEqual(result.value, 'fred');
 		});
 
 	});

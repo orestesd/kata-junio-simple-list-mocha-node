@@ -31,9 +31,19 @@ var LinkedList = function() {
 
 	};
 
+	var find = function(item) {
+		var temp = firstNode;
+		while(temp) {
+			if (temp.value === item)
+				return temp
+		}
+		return null;
+	};
+
 	return {
 		values : values,
-		add : add
+		add : add,
+		find : find
 	}
 }
 
