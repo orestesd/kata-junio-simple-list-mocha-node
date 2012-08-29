@@ -55,6 +55,8 @@ var LinkedList = function() {
                     }
                     temp = temp.next;
                 }
+
+                lastNode = temp
             }
 		}
 		return found;
