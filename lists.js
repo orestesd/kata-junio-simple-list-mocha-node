@@ -119,6 +119,9 @@ var DoubleLinkedList = function() {
 			if (found.next) {
 				found.next.prev = found.prev
 			}
+
+			if (found.value === lastNode.value)
+				lastNode = found.prev
 		}
 		return found;
 	}
