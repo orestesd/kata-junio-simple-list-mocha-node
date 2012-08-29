@@ -81,34 +81,31 @@ var DoubleLinkedList = function() {
 			prev.next = this;
 	}
 
-	var firstNode, lastNode;
+	var lastNode;
 
 	var values = function() {
 		var vals = [];
-		var temp = firstNode;
+		var temp = lastNode;
 		while(temp) {
 			vals.push(temp.value);
-			temp = temp.next;
+			temp = temp.prev;
 		}
 
-		return vals;
+		return vals.reverse();
 	}
 
 	var add = function(item) {
 		var node = new Node(item, lastNode);
 
 		lastNode = node;
-		if (!firstNode)
-			firstNode = node;
-
 	};
 
 	var find = function(item) {
-		var temp = firstNode;
+		var temp = lastNode;
 		while(temp) {
 			if (temp.value === item)
 				return temp
-			temp = temp.next;
+			temp = temp.prev;
 		}
 		return null;
 	};
