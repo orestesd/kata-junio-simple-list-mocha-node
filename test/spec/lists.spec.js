@@ -23,6 +23,8 @@ describe("Single LinkedList", function() {
 
 		list.add('betty');
 		assert.equal(list.values().length, 3);
+
+		assert.deepEqual(list.values(), ['fred', 'wilma', 'betty']);
 	});
 
 	describe("finding values", function() {
